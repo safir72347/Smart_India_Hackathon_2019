@@ -1,0 +1,10 @@
+.news_c{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0, 0, 0, 0.781));
+}
+
+.carousel-caption {
+    top: 65vh;
+    bottom: auto;
+}
+
+

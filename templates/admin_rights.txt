@@ -1,0 +1,109 @@
+All the below listed pages should created with html forms in them and the input 
+fields of forms are mentioned below the pages
+
+NOTE:<<<<<<<<_______EACH PAGE SHOULD CONTAIN TWO BUTTONS which are || Save Changes  ||
+ad ||  Cancel  || each with pop up for confirmation_______>>>>>>>
+
+
+Name of the person for each individual page is mentioned in front of the page name
+
+
+
+<!-- HOME PAGE ___Rutuja kalbhor___-->
+	company name
+	caption
+	background image
+	--button name domestic and International labour organizations
+	--explore government schemes
+	news headings
+	--button name read more latest news
+	--button name
+	--post field
+
+
+<!-- HEADER ___Rutuja kalbhor___-->
+	--app link
+	-- login register link
+
+
+<!-- FOOTER ___Rutuja kalbhor___-->
+	all three headings viz:
+		disclaimer
+			-content
+
+		contact us
+			-email
+			-add social media link
+			-change social media links
+			-change/add phone number
+
+		terms and policies
+			-edit terms and policies
+
+
+<!-- NAVBAR ___Rutuja kalbhor___-->
+	change button names of
+		-home
+		-about us
+		-latest news
+		-forum
+		-others	
+			-research
+			-publication
+			-trainings
+
+
+<!-- FORUM __Ram suthar___-->
+	--edit forum categories
+	--ad image
+	--ad head
+	--ad caption
+	--ad link
+	--add/remove posts based on report notification
+	--add/remove fields in ask question form
+
+
+<!-- LATEST NEWS __Rajendra Kelwa__-->
+	--edit slider heading
+	--edit slider caption
+	--edit image of slider
+	--add/remove news
+	--CHANGES IN INDIVIDUAL NEWS PAGE
+		--heading of news
+		--add/remove new images
+		--edit news content
+
+
+<!-- ABOUT US __Rajendra Kelwa__-->
+	-headings
+		-about us
+		-aims and objectives
+	-content of about us
+	-images
+	-content of aims and objectives
+	-about developers
+
+
+<!-- REGISTER PAGE __Rajendra Kelwa__-->
+	-add or remove fields
+
+
+<!-- PROFILE PAGE __Rajendra Kelwa__-->
+	-add or remove fields [for admin only]
+	-add or remove profile pic [for normal user only]
+	-add or remove post [for normal user only]
+
+
+<!-- CATEGORY OF CONTENTS __Rajendra Kelwa__-->
+	-add new category
+	-add new image to the category
+	-remove category
+	
+<<< ADMIN DASHBOARD >>>
+__Ram suthar__
+
+
+
+
+
+	

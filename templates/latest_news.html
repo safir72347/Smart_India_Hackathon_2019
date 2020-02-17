@@ -1,0 +1,150 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+<head>
+
+
+    {% include "external.html" %}
+    <link rel="stylesheet" href="{% static 'latest_news.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <title>
+        Forum
+    </title>
+</head>
+<body>
+    {% include "header.html" %}
+    {% include "nabar.html" with image=slider_caption %}
+    <div class="bd-example">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                    {% for x in list_of_numbers %}
+                    <li data-target="#carouselExampleCaptions" data-slide-to="{{x}}"></li>
+                    {% endfor %}
+                  </ol>
+
+                  {% for x in sliders %}
+
+
+                  {% if x.id == 1 %}
+                  <div class="carousel-inner" style="max-height: 88vh !important;">
+                    <div class="carousel-item active" data-interval="5000">
+                      <img src="{{ x.image_link }}" class="d-block w-100" alt="...">
+                        <a href="#">
+                            <div class="carousel-caption d-none d-md-block news_c">
+                                <h3>{{ x.slider_heading }}</h3>
+                                <p>{{ x.slider_caption }}</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    {% else %}
+
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="{{ x.image_link }}" class="d-block w-100" alt="...">
+                        <a href="#">
+                            <div class="carousel-caption d-none d-md-block news_c">
+                                <h3>{{x.slider_heading}}<h3>
+                                <p>{{x.slider_caption}}</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    {% endif %}
+
+                    {% endfor %}
+
+
+                    <!-- <div class="carousel-item" data-interval="5000">
+                        <img src="{{image_link}}" class="d-block w-100" alt="...">
+                        <a href="#">
+                            <div class="carousel-caption d-none d-md-block news_c">
+                                <h3>{{slider_heading}}<h3>
+                                <p>{{slider_caption}}</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="https://images3.alphacoders.com/670/thumb-1920-670314.jpg" class="d-block w-100" alt="...">
+                        <a href="#">
+                            <div class="carousel-caption d-none d-md-block news_c">
+                                <h3>Third slide label</h3>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </a>
+                    </div>
+                  </div> -->
+                  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+</div>
+
+
+
+    <section class=" container-fluid latest_news">
+      <div class="row">
+          {% for i in obj_list reversed %}
+                    <div class="col-md-4 mt-4">
+                      <div class="card profile-card-5">
+                        <h1></h1>
+                          <div class="card-img-block">
+                              <img class="card-img-top" src="{{ central_image_link }}" alt="Card image cap">
+                          </div>
+                              <div class="card-body pt-0">
+                                <h5 class="card-title">
+                                  {{i.article_heading}}</h5>
+
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#a{{ i.agd_id }}">Read More</button>
+
+                              </div>
+                          </div>
+                    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="a{{ i.agd_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="text-align:center;item-align:center;">
+  <div class="modal-dialog modal-lg" role="document" >
+    <div class="modal-content" style="height:100vh;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ i.article_heading }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {% if i.html_content != "None" %}
+                {{ i.html_content|safe }}
+        {% endif %}
+
+        {% if i.pdf_links != ""  %}
+
+        <object data="{{ i.pdf_links }}" type="application/pdf#toolbar=0" width="100%" height="800px"">
+            <embed src="{{ i.pdf_links }}" type="application/pdf"#toolbar=0" width="100%" height="800px" />
+        </object>
+
+
+        {% endif %}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+          {% endfor %}
+      </div>
+    </section>
+
+
+    {% include "footer.html" %}
+</body>
+</html>

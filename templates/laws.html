@@ -1,0 +1,381 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        {% include "external.html" %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'laws.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'assets/plugins/chartist-js/dist/chartist.min.css' %}" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <title>Labour's Cluster</title>
+    </head>
+    <body>
+        {% include 'header.html' %}
+        {% include 'nabar.html' %}
+        <section class="container" style="text-align:center;margin:2%;">
+            <p class="h2 had">
+                IMPORTANT LAWS
+            </p>
+        </section>
+        <section class=" container shadow p-3 mb-5 bg-white rounded laws">
+            <a class="h4 text-dark" data-toggle="collapse" href="#explanation" role="button" aria-expanded="false" aria-controls="law_explanation">
+                <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Minimum Wages Act, 1948
+            </a>
+            <div class="collapse lead text-dark explain" id="explanation">
+                <div class="card card-body des">
+                        The Minimum Wages Act, 1948 (the Minimum Wages Act) provides for fixing of minimum rates of wages in certain employments. The minimum wages are prescribed by States through notifications in the State's Gazette under the Minimum Wages Rules of the specific State.
+                        In terms of the provisions of the Minimum Wages Act, an employee means (i) any person who is employed for hire or reward to do any work, skilled or unskilled manual or clerical, in a scheduled employment in respect of which minimum rates of wages have been fixed; (ii) an outworker, to whom any articles or materials are given out by another person to be made up, cleaned, washed, altered, ornamented, finished, repaired, adapted or otherwise processed for sale for the purposes of the trade or business of that other person; and (iii) an employee declared to be an employee by the appropriate Government.
+                        The term "wages" has been defined to mean all remuneration capable of being expressed in terms of money which would, if the terms of the contract of employment express or implied were fulfilled, be payable to a person employed in respect of his employment or work done in such an employment and includes house rent allowance but does not include:
+                        The value of:
+                        <ul>
+                        <li>Any house accommodation or supply of light, water and medical attendance; or</li>
+                        <li>Any other amenity or any service excluded by general or special order of the appropriate Government;</li>
+                        <li>Any contribution paid by the employer to any personal fund or provident fund or under any scheme of social insurance;</li>
+                        <li>Any travelling allowance or the value of any travelling concession;</li>
+                        <li>Any sum paid to the person employed to defray special expenses entailed on him by the nature of his employment; or</li>
+                        <li>Any gratuity payable on discharge.</li></ul>
+                        Further, the Minimum Wages Act requires the employer to pay to every employee engaged in schedule employment wages at a rate not less than minimum rates of wages as fixed by a notification without any deduction (other than prescribed deductions, if any).
+                        
+                    <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                        Do you think your company is violating this law? click here to check.
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                <a class="h4 text-dark" data-toggle="collapse" href="#explanation1" role="button" aria-expanded="false" aria-controls="law_explanation">
+                    <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Payment of Wages Act, 1936
+                </a>
+                <div class="collapse lead text-dark explain" id="explanation1">
+                    <div class="card card-body des">
+                            The Payment of Wages Act, 1936 (the Payment of Wages Act) is an Act to regulate the payment of wages to certain classes of employed persons. The Payment of Wages Act seeks to ensure that the employers make a timely payment of wages to the employees working in the establishments and to prevent unauthorized deductions from the wages.
+                            According to the Payment of Wages Act, all wages shall be in current coin or currency notes or in both. It is, however, provided that the employer may, after obtaining the written authorisation of the employed person, pay him the wages either by cheque or by crediting the wages in his bank account.
+                            
+                        <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                            Do you think your company is violating this law? click here to check.
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                    <a class="h4 text-dark" data-toggle="collapse" href="#explanation2" role="button" aria-expanded="false" aria-controls="law_explanation">
+                        <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Employees Provident Funds and Miscellaneous Provisions Act, 1952
+
+                    </a>
+                    <div class="collapse lead text-dark explain" id="explanation2">
+                        <div class="card card-body des">
+                                The Employees Provident Funds and Miscellaneous Provisions Act, 1952 (the "EPF Act") provides for the institution of provident funds, pension funds, and deposit-linked insurance funds for employees and applies to all establishments employing 20 or more persons or class of persons. An establishment to which the EPF Act applies shall continue to be governed by this Act, notwithstanding that the number of persons employed therein at any time falls below 20.
+                            On account of 2014 Amendment to the said Act, The definition of "excluded employee" has been amended whereby the members drawing wages exceeding Rs 15,000 per month have been excluded from the provisions of the PF Scheme. Accordingly, the wage ceiling for an employee to be eligible for the PF Scheme has been increased from Rs 6,500 per month to Rs 15,000 per month. It further provides that every employee employed in or in connection with the work of a factory or other establishment is required to become a member of the Provident Fund.
+                            The 2014 Amendment further lays down the following changes:
+                            New members (joining on or after 1 September 2014) drawing wages above Rs 15,000 per month shall not be eligible to voluntarily contribute to the Pension Scheme.
+                            The pensionable salary shall be calculated on the average monthly pay for the contribution period of the last 60 months (earlier 12 months) preceding the date of exit from the membership.
+                            The monthly pension for any existing or future member shall not be less than Rs 1,000 for the financial year 2014-2015.
+                            The contribution payable under the Insurance Scheme shall also be calculated on a monthly pay of Rs 15,000, instead of Rs 6,500.
+                            In the event of death of a member (on or after 1 September 2014), the assurance benefits available under the Insurance Scheme has been increased by twenty percent (20%) in addition to the already admissible benefits.
+                            Contributions to the Provident Fund are to be made at the rate of 12% of the wages by the employers with the employee contributing an equal amount. The employee may voluntarily contribute a higher amount but the employer is not obliged to contribute more than the prescribed amount. Further, the EPF Act contains provisions for transfer of accumulations in case of change of employment.
+                            In terms of power conferred under s 143(11) of the Companies Act, 2013, the Central Government has issued the Companies (Auditor's Report) Order, 2015 (CARO), which came into force on 10 April, 2015. Clause (vii) (a) of Paragraph 3 provides that:
+                            The [Statutory] Auditor has to report, inter alia, on the following:
+                            <ul>
+                            <li>Is the company regular in depositing undisputed statutory dues, eg, Provident Fund, Investor Education and Protection Fund, Employees' State Insurance, income tax, wealth tax, service tax, sales tax, customs duty, excise duty, cess and any other statutory duties with the appropriate authorities?</li>
+                            <li>If not paid regularly, the extent of the arrears of outstanding statutory dues as on the last day of the financial year concerned for a period of more than six months from the date they became payable, then it shall be indicated in the report.</li>
+                            <li>If such non-payment of dues is on account of any dispute, then the amount involved and for the forum where the dispute is pending should also be mentioned.</li></ul>
+                            The CARO is, however, not applicable to a banking company, an insurance company, s 8 company, one person company, small companies and certain class of private companies, as specified under the CARO.
+                            <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                Do you think your company is violating this law? click here to check.
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                        <a class="h4 text-dark" data-toggle="collapse" href="#explanation3" role="button" aria-expanded="false" aria-controls="law_explanation">
+                            <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Employees' State Insurance Act, 1948
+                        </a>
+                        <div class="collapse lead text-dark explain" id="explanation3">
+                            <div class="card card-body des">The Employees' State Insurance Act, 1948 (the ESI Act) is a social welfare legislation enacted with the objective of providing certain benefits to employees in case of sickness, maternity and employment injury. In terms of the provisions of the ESI Act, the eligible employees will receive medical relief, cash benefits, maternity benefits, pension to dependants of deceased workers and compensation for fatal or other injuries and diseases. It is applicable to establishments where 10 or more persons are employed. All employees, including casual, temporary or contract employees drawing wages less than Rs 15,000 per month, are covered under the ESI Act. This limit has been increased from Rs 10,000 to Rs 15,000 w.e.f. May 1, 2010.
+                                    The Government enacted as the Employees' State Insurance (Amendment) Act, 2010 (No.18 of 2010). All the provisions of the ESI (Amendment) Act 2010 (except s 18) have come into effect from June 1, 2010. The salient features of the ESI (Amendment) Act are as under:
+                                   <ul> facilitating coverage of smaller factories;
+                                  <li> enhancing age limit of dependent children for eligibility to dependants benefit;</ul>
+                                   <li> extending medical benefit to dependant minor brother/sister in case of insured persons not having own family and whose parents are also not alive;</li>
+                                   <li> streamlining the procedure for assessment of dues from defaulting employers;</li>
+                                   <li> providing an Appellate Authority within the ESI Corporation against assessment to avoid unnecessary litigation;</li>
+                                    <li>continuing medical benefit to insured persons retiring under VRS scheme or taking premature retirement;</li>
+                                    <li>treating commuting accidents as employment injury;</li>
+                                    <li>streamlining the procedure for grant of exemptions;</li>
+                                    <li>third party participation in commissioning and running of the hospitals;</li>
+                                    <li>opening of medical/ dental/ paramedical/ nursing colleges to improve quality of medical care;</li>
+                                    <li>making an enabling provision for extending medical care to other beneficiaries against payment of user charges to facilitate providing of medical care from under utilised ESI Hospitals to the BPL families covered under the Rashtriya Swasthaya Bima Yojana introduced by the Ministry of Labour & Employment w.e.f. 1.4.2008;</li>
+                                    <li>reducing duration of notice period for extension of the Act to new classes of establishments from six months to one month;</li>
+                                    <li>empowering State Governments to set up autonomous Corporations for administering medical benefit in the States for bringing autonomy and efficiency in the working.</li></ul>
+                                    The employer should get his factory or establishment registered with the Employees' State Insurance Corporation (ESIC) within 15 days after the Act becomes applicable to it, and obtain the employer's code number.
+                                    The employer is required to contribute at the rate of 4.75% of the wages paid/ payable in respect of every wage period. The employees are also required to contribute at the rate of 1.75% of their wages.
+                                    It is the responsibility of the employer to deposit such contributions (employer's and employees') in respect of all employees (including the contract labour) into the ESI account.
+                                    
+                                                     <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                    Do you think your company is violating this law? click here to check.
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+           
+
+                    <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                            <a class="h4 text-dark" data-toggle="collapse" href="#explanation4" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Labour Welfare Fund Act (of respective States)
+                            </a>
+                            <div class="collapse lead text-dark explain" id="explanation4">
+                                <div class="card card-body des">The [State] Labour Welfare Fund Act provides for the constitution of the Labour Welfare Fund to promote and carry out various activities conducive to the welfare of labour in the State so as to ensure full and appropriate utilisation of the Fund.
+
+                                                         <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                        Do you think your company is violating this law? click here to check.
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                <a class="h4 text-dark" data-toggle="collapse" href="#explanation5" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                    <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Payment of Gratuity Act, 1972
+                                </a>
+                                <div class="collapse lead text-dark explain" id="explanation5">
+                                    <div class="card card-body des">The Payment of Gratuity Act, 1972 (the Gratuity Act) applies to (i) every factory, mine, oilfield, plantation, port and railway company; (ii) every shop or establishment within the meaning of any law, for the time being in force, in relation to shops and establishments in a State, in which 10 or more persons are employed or were employed on any day of the preceding twelve months; and (iii) such other establishments or classes of establishments, in which 10 or more persons are employed or were employed on any day of the preceding twelve months, as the Central Government may, by notification, specify in this behalf.
+                                            The Gratuity Act provides for a scheme for the payment of gratuity to employees engaged in factories, mines, oilfields, plantations, ports, railway companies, shops or other establishments. The Gratuity Act enforces the payment of "gratuity", a reward for long service, as a statutory retiral benefit.
+                                            Every employee, who has completed continuous service of five years or more, irrespective of his wages, is entitled to receive gratuity upon termination of his employment, on account of (i) superannuation; or (ii) retirement; or (iii) death or disablement due to accident or disease. However, the completion of continuous service of five years shall not be necessary where the termination of employment of any employee is due to death or disablement.
+                                            The gratuity is payable even to an employee who resigns after completing at least five years of service.
+                                            The gratuity is payable at the rate of fifteen days wages for every year of completed service, subject to an aggregate amount of Rupees ten lacs only. However, if an employee has the right to receive higher gratuity under a contract or under an award, then the employee is entitled to get higher gratuity.
+                                                                                                 <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                            Do you think your company is violating this law? click here to check.
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                    <a class="h4 text-dark" data-toggle="collapse" href="#explanation6" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                        <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>LAWS RELATING TO WORKING HOURS, CONDITIONS OF SERVICE AND EMPLOYMENT
+                                    </a>
+                                    <div class="collapse lead text-dark explain" id="explanation6">
+                                        <div class="card card-body des"><h2>Factories Act, 1948</h2>
+                                                The Factories Act, 1948 (the Factories Act) lays down provisions for the health, safety, welfare and service conditions of workmen working in factories. It contains provisions for working hours of adults, employment of young persons, leaves, overtime, etc. It applies to all factories employing more than 10 people and working with the aid of power, or employing 20 people and working without the aid of power. It covers all workers employed in the factory premises or precincts directly or through an agency including a contractor, involved in any manufacture. Some provisions of the Act may vary according to the nature of work of the establishment.
+                                                Some Major provisions of the Factories Act are explained below:
+                                               <ul><li> Section 11 of the Act provides that every factory shall be kept clean and free from effluvia arising from any drain, privy or other nuisance. Section 13 of the Act focuses on ventilation and temperature maintenance at workplace. Every factory should work on proper arrangements for adequate ventilation and circulation of fresh air.</li>
+                                                <li>Section 18 of the Act specifies regarding arrangements for sufficient and pure drinking water for the workers.</li>
+                                                <li>Section 19 further mentions that in every factory there should be sufficient accommodation for urinals which should be provided at conveniently situated place. It should be kept clean and maintained.</li>
+                                                <li>Section 21 of the Act provides from proper fencing of machinery. And that any moving part of the machinery or machinery that is dangerous in kind should be properly fenced</li>
+                                                <li>Further s 45 of the said Act specifies that every factory should have a properly maintained and well equipped first aid box or cupboard with the prescribed contents. For every 150 workers employed at one time, there shall not be less than 1 first aid box in the factory. Also in case where there are more than 500 workers there should be well maintained ambulance room of prescribed size and containing proper facility.</li></ul>
+                                                                                            <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                Do you think your company is violating this law? click here to check.
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                        <a class="h4 text-dark" data-toggle="collapse" href="#explanation7" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                            <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Industrial Employment (Standing Orders) Act, 1946
+                                        </a>
+                                        <div class="collapse lead text-dark explain" id="explanation7">
+                                            <div class="card card-body des">The Industrial Employment (Standing Orders) Act, 1946 (the IESO Act) is applicable to every industrial establishment wherein 100 or more workmen are employed or were employed on any day of the preceding twelve months. The IESO Act Amis to bring uniform terms and conditions of service in various industrial establishments. The IESO Act requires every employer in an industrial establishment to clearly define and publish standing orders with respect to conditions of employment / service rules and to make them known to the workmen employed by it. The Act further specifies that every employer is required to submit to the Certifying Officer five draft copies of the standing orders which he intends to adopt for his establishment.
+                                                    Further, the IESO Act requires display of standing orders in a prominent place for the knowledge of workers.
+                                                                    <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                    Do you think your company is violating this law? click here to check.
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+                                    <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                            <a class="h4 text-dark" data-toggle="collapse" href="#explanation8" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                                <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Shops and Commercial Establishments Act (of respective States)
+                                            </a>
+                                            <div class="collapse lead text-dark explain" id="explanation8">
+                                                <div class="card card-body des">The Shops and Commercial Establishments Act(s) of the respective States generally contain provisions relating to registration of an establishment, working hours, overtime, leave, privilege leave, notice pay, working conditions for women employees, etc. The provisions of the Shops and Commercial Establishments Act apply to both white collar and blue-collar employees. IT and IT-enabled services have been given relaxations by various State Governments in respect of the observance of certain provisions of their respective Shops and Commercial Establishments Act.
+
+                                                                        <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                        Do you think your company is violating this law? click here to check.
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </section>
+           
+
+                                        <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                                <a class="h4 text-dark" data-toggle="collapse" href="#explanation9" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                                    <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Contract Labour (Regulation & Abolition) Act, 1970
+                                                </a>
+                                                <div class="collapse lead text-dark explain" id="explanation9">
+                                                    <div class="card card-body des">The Employee's Compensation Act, 1923 (the EC Act) aims to provide financial protection to workmen and their dependents in case of any accidental injury arising out of or in course of employment and causing either death or disablement of the worker by means of compensation.
+                                                    This Act applies to factories, mines, docks, construction establishments, plantations, oilfields and other establishments listed in Schedules II and III of the said Act, but excludes establishments covered by the ESI Act.
+                                                    The Act provides for payment of compensation by the employer to the employees covered under this Act for injury caused by accident. Generally, companies take insurance policies to cover their liability under the EC Act.
+                                                    
+                                                    
+                                                                            <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                            Do you think your company is violating this law? click here to check.
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                
+                                            <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                                    <a class="h4 text-dark" data-toggle="collapse" href="#explanation10" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                                        <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Inter-state Migrant Workmen (Regulation of Employment and Conditions of Service) Act, 1979
+                                                    </a>
+                                                    <div class="collapse lead text-dark explain" id="explanation10">
+                                                        <div class="card card-body des">The Inter-state Migrant Workmen (Regulation of Employment and Conditions of Service) Act, 1979 (the ISMW Act) is an Act to regulate the employment of inter-state migrant workmen and to provide for the conditions of service and for matters connected therewith.
+                                                        The ISMW Act applies to (i) any establishment in which five or more inter-state migrant workmen are employed or who were employed on any day of the preceding twelve months; and (ii) every contractor who employs or who employed five or more inter-state migrant workmen on any day of the preceding twelve months.
+                                                        For the purpose of the ISMW Act, an inter-state migrant workman means any person who is recruited by or through a contractor in one state under an agreement or other arrangement for employment in an establishment in another state, whether with or without the knowledge of the principal employer in relation to such an establishment.
+                                                        
+                                                        
+                                                        
+                                                                                <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                                Do you think your company is violating this law? click here to check.
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </section>
+               
+
+                                                <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                                        <a class="h4 text-dark" data-toggle="collapse" href="#explanation11" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                                            <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Weekly Holiday Act, 1942
+                                                        </a>
+                                                        <div class="collapse lead text-dark explain" id="explanation11">
+                                                            <div class="card card-body des">The Weekly Holiday Act, 1942 provides for the grant of weekly holidays to persons employed in shops, restaurants and theatres. The Act provides that every shop shall remain entirely closed on one day of the week, which day shall be specified by the shop-keeper in a notice permanently exhibited in a conspicuous place in the shop. Further the state government may require in respect of shops or any specified class of shops that they shall be closed at such hour in the afternoon of one week-day in every week in addition to weekly day off.
+
+                                                            
+                                                            
+                                                            
+                                                                                    <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                                    Do you think your company is violating this law? click here to check.
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+
+                    <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                            <a class="h4 text-dark" data-toggle="collapse" href="#explanation12" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>The Plantation Labour Act, 1951
+
+                            </a>
+                            <div class="collapse lead text-dark explain" id="explanation12">
+                                <div class="card card-body des">The Plantations Labour Act (PLA) seeks to provide for the welfare of labour and to regulate the conditions of workers in plantations. This Act empowers the State Governments to take all feasible steps to improve the lot of the plantation workers. The passing of PLA has helped in creating conditions for organising the workers and the rise of trade unions.
+                                The Act defines an employer as, the person who has the ultimate control over the affairs of the plantation and where the affairs of the plantation are entrusted to any other person, such other person shall be the employer in relation to that plantation.
+                                Plantation: Any plantation to which this Act applies and includes offices, hospitals, dispensaries, schools and any other premises used for any purposes connected with such plantation.
+                                The Act makes it mandatory for every employer to get their plantation registered within 60 days of its coming into existence.
+                                
+                                
+                                        <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                        Do you think your company is violating this law? click here to check.
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                <a class="h4 text-dark" data-toggle="collapse" href="#explanation13" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                    <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>The Mines Act, 1952
+
+                                </a>
+                                <div class="collapse lead text-dark explain" id="explanation13">
+                                    <div class="card card-body des">The Mines Act, 1952 (Mines Act) aims to secure safety and health and welfare of workers working in the mines. "Mine" is defined under the Mines Act as a place where any excavation work is carried on for the searching and obtaining of minerals.
+                                    The Mines Act provides that persons working in the mine should not be less than 18 years of age.
+                                    The Mines Act lays down provisions for appointment of one chief inspector who would be regulating all the territories in which mining is done and an inspector for every mine who would be sub ordinate to the chief inspector. Moreover, the District Magistrate is also empowered to perform the duties of an inspector subject to the orders of the Central Government. The chief inspector or any of the inspectors may make such inquiry, at any time whether day or night, in order to check whether the law is being abided in the mines or not.
+                                    
+                                    
+                                    
+                                            <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                            Do you think your company is violating this law? click here to check.
+                                        </a>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                    <a class="h4 text-dark" data-toggle="collapse" href="#explanation14" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                        <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Equal Remuneration Act, 1976
+
+                                    </a>
+                                    <div class="collapse lead text-dark explain" id="explanation14">
+                                        <div class="card card-body des">The Equal Remuneration Act, 1976 provides for the payment of equal remuneration to men and women workers for the same work and prevents discrimination, on the ground of sex, against women in the matter of employment, recruitment and for matters connected therewith or incidental thereto. This Act applies to virtually every kind of establishment.
+
+                                        
+                                        
+                                                <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                Do you think your company is violating this law? click here to check.
+                                            </a>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                        <a class="h4 text-dark" data-toggle="collapse" href="#explanation15" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                            <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Maternity Benefit Act, 1961
+
+
+                                        </a>
+                                        <div class="collapse lead text-dark explain" id="explanation15">
+                                            <div class="card card-body des">The Maternity Benefit Act, 1961 (Maternity Benefit Act) regulates the employment of women in certain establishments for a certain period before and after childbirth and provides for maternity benefits and certain other benefits including maternity leave, wages, bonus, nursing breaks, etc, to women employees.
+                                            The Maternity Benefit Act, 1961 applies to (a) a factory, mine or plantation including any such establishment belonging to Government and to every establishment wherein persons are employed for the exhibition of equestrian, acrobatic and other performances; (b) every shops or establishments within the meaning of any law for the time being in force in relation to shops and establishments in a State, in which ten or more persons are employed, or were employed on any day of the preceding 12 months.
+                                            Except for s 5A and 5B, the provisions of the Maternity Benefit Act shall not apply to the employees who are covered under the Employees' State Insurance Act, 1948 for certain periods before and after child-birth and for which the ESI Act provides for maternity and other benefits. The coverage under the ESI Act is, however, at present restricted to factories and certain other specified categories of establishments located in specified areas. The Maternity Benefit Act is, therefore, still applicable to women employees employed in establishments which are not covered by the ESI Act, as also to women employees, employed in establishments covered by the ESI Act, but who are out of its coverage because of the wage-limit.
+                                            Under the Maternity Benefit Act, an employer has to give paid leave to a woman worker for six weeks immediately following the day of her delivery or miscarriage and two weeks following a tubectomy operation. The maximum period for which a woman shall be entitled to maternity benefit shall be 12 weeks, of which not more than six weeks shall precede the date of her expected delivery.
+                                            A pregnant woman is also entitled to request her employer not to give her work of arduous nature or which involves long hours of standing, etc, during the period of one month immediately preceding the date of her expected delivery or any period during the said period of six weeks for which the woman does not avail leave of absence. When a woman absents herself from work in accordance with the provisions of the Maternity Benefit Act, it shall be unlawful for her employer to discharge or dismiss her during or on account of such absence.
+                                            
+                                            
+                                            
+                                                    <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                    Do you think your company is violating this law? click here to check.
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </section>
+
+
+
+
+
+                                        <section class=" container shadow p-3 mb-5 bg-white rounded laws" style="margin-top:-2%">
+                                                <a class="h4 text-dark" data-toggle="collapse" href="#explanation17" role="button" aria-expanded="false" aria-controls="law_explanation">
+                                                    <i class="fas fa-plus" style="opacity: 90%; font-size: 2.8vh; padding-right: 1.5%;"></i>Bonded Labour System (Abolition) Act, 1976
+
+                                                </a>
+                                                <div class="collapse lead text-dark explain" id="explanation17">
+                                                    <div class="card card-body des"> The Bonded Labour System (Abolition) Act, 1976 ( Bonded Labour Abolition Act) is a prohibiting legislation which provides for the abolition of the bonded labour system with a view to prevent the economic and physical exploitation of the weaker sections of the society, and matters connected therewith or incidental thereto.
+                                                    Under the Bonded Labour Abolition Act, the term " bonded labour" has been defined to mean any labour or service rendered under the bonded labour system.
+                                                    The term " bonded labour system" has been defined to mean the system of, forced or partly forced, labour under which a debtor enters or has, or is presumed to have, entered into an agreement with the creditor to the effect that:
+                                                <ul> <li>In consideration of an advance obtained by him or by any of his lineal ascendants or descendants (whether or not such advance is evidenced by the document) and in consideration of the interest, if any, due on such advance; or</li>
+                                                    <li>In pursuance of any customary or social obligation; or</li>
+                                                    <li>In pursuance of any obligation devolving on him by succession; or</li>
+                                                    <li>For any economic consideration received by him or by any of his lineal ascendants or descendants; or</li>
+                                                    
+                                                    <li> By reason of his birth in any particular caste or community.</li></ul>
+                                                
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                            <a href="#" class="alert alert-danger link" role="alert" style="margin-top:2%;" >
+                                                            Do you think your company is violating this law? click here to check.
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                                  {% include 'footer.html' %}    
+
+                                                                           
+                        
+    
+                   
+       
+    </body>
+</html>

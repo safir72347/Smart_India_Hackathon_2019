@@ -1,0 +1,21 @@
+.admin_logo{
+    font-family: 'Lobster', cursive;
+}
+
+.navbar .navbar-nav {
+    text-align: center;
+    width: 100%;
+    float: none;
+    
+  }
+
+  .navbar ul li{
+      float: none;
+      width:100%;
+      text-align: justify;
+  }
+
+  .admn{
+      padding-right:5px; 
+  }
+  

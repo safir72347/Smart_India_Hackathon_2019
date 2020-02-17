@@ -1,0 +1,18 @@
+.head{
+	background-color: #FE642E;
+	text-align: center;
+	font-size: 0.9em;
+	color: white;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+}
+
+.head a{
+	color:white;
+}
+
+.icon{
+	font-size: 10px;
+	color:white;
+	margin-right: 10px;
+}

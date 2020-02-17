@@ -1,0 +1,280 @@
+.head{
+	background-color: #FE642E;
+	text-align: center;
+	font-size: 0.8em;
+	color: white;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	
+
+	top:0;
+}
+
+.head a{
+	color:white;
+}
+
+.head a:hover{
+	font-size: 1em;
+	color:#F5D0A9;
+	font-weight: bold;
+}
+
+.icon{
+	font-size: 2.5vh;
+	margin-right: 2%;
+	margin-left: 1%;
+	color:white;
+}
+
+.icon:hover{
+	color:#00BFFF;
+}
+
+#log{
+	float: right;
+	padding-right: 20%;
+}
+
+.heading{
+	color: black;
+	font-family: 'Exo 2', sans-serif;
+	text-align: center;
+	color:white;
+}
+
+#ps{
+	padding-left: 6%;
+	padding-right: 6%;
+	padding-top:2%;
+	font-size: 0.8em;
+	font-family: 'Raleway', sans-serif;
+}
+
+#ps a{
+	color: white;
+}
+
+#ps a:hover{
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+.foot{
+	background-color: #151515;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+
+.social_icons{
+	font-size: 3.3vh;
+	margin-right: 3%;
+	margin-left: 3%;
+	color:white;
+}
+
+.social_icons:hover{
+	
+	border-color: white;
+	color:#00BFFF;
+}
+
+.footer_content{
+	padding-bottom: 2%;
+}
+
+.nb li{
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.search-box{
+	height: 5.5vh;
+	background-color: transparent;
+	width: 36vh;
+	text-align: center;
+	border-radius: 3vh; 
+	border: 0.2vh solid white;
+}
+
+.search-txt{
+	margin-top: 0.6vh;
+	background-color: transparent;
+	border: none;
+	color:#D8D8D8;
+
+}
+
+textarea:focus, input:focus{
+	outline: none;
+	color:#D8D8D8;
+}
+
+.search-btn a{
+	color:#white;
+	border: none;
+	background-color: transparent;
+}
+
+.nbb{
+background-color: #151515;
+padding-bottom: 0.5%;
+padding-top: 0.5%;
+font-family: 'Raleway', sans-serif;
+font-size: 1.1em;
+}
+
+
+@media only screen and (max-width:600px){
+	#log{
+		float: none;
+		text-align: center;
+		padding-right: 0;
+	}
+
+	.nbb{
+		text-align: center;
+		padding-top: 2%;
+		padding-bottom: 3%;
+	}
+}
+
+
+
+
+/*Profile Card 5*/
+.profile-card-5{
+    margin-top:20px;
+}
+.profile-card-5 .btn{
+    border-radius:2px;
+    text-transform:uppercase;
+    font-size:12px;
+    padding:7px 20px;
+}
+
+
+.profile-card-5 .card-img-block {
+	width: 91%;
+	height: 40vh;
+    margin: 0 auto;
+    position: relative;
+    top: -20px;
+    
+}
+.profile-card-5 .card-img-block img{
+    border-radius:5px;
+    box-shadow:0 0 10px rgba(0,0,0,0.63);
+}
+.profile-card-5 h5{
+    color:rgb(41, 40, 40);
+    font-weight:600;
+}
+.profile-card-5 p{
+    font-size:14px;
+    font-weight:300;
+}
+.profile-card-5 .btn-primary{
+	color:white;
+    background-color:rgb(0, 0, 0);
+    border-color:rgb(0, 0, 0);
+}
+
+.profile-card-5 .btn-primary:hover{
+	color:black;
+    background-color:white;
+    border-color:rgb(0, 0, 0);
+}
+
+
+.latest_news{
+	padding-bottom: 1%;
+}
+
+.wall{
+	text-align: center;
+	background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),url(https://images.wallpaperscraft.com/image/street_people_area_road_38284_2560x1600.jpg);
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 87vh;
+}
+
+
+.naam{
+	font-family: 'Lobster', cursive;
+	color:white;
+	font-size:4em;
+	padding-top: 13%;
+	
+}
+
+.naam_niche{
+	color:white;
+	padding: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.news_head{
+	padding-top:1%;
+	padding-bottom: 1%;
+	text-align: center;
+	color:black;
+}
+
+
+.btn-primary{
+	border-radius: 0;
+	padding: 0;
+	border-color:transparent;
+	height:280%;
+	font-size: 1.2em;
+}
+
+
+.b{
+	width: 50%;
+	padding-bottom: 4%;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+.blog_heads{
+	font-family: 'Inconsolata', monospace;
+	text-align: left;	
+
+}
+
+.bicon{
+	font-size: 1.5em;
+	padding-right: 2%;
+	padding-left: 2%;
+	
+}
+
+.blogs{
+	padding-top: 2%;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top: 5%;
+	
+
+}
+
+.time{
+	color: #b2bec3;
+	font-size: 2vh;
+	padding-left:10%;
+	margin-top:-0.8%;
+}
+
+.content{
+	background-color: #ecf0f1;
+}
+.content_head{
+	background-color: #f4f6f7;
+	font-family: 'Nanum Gothic', sans-serif;
+	padding-top:1%;
+	padding-bottom: 1%;
+}

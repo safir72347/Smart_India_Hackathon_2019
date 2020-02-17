@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+                .body{
+                    background-color: white;
+                }
+                .form-control{
+                    background-color: #ecf0f1;
+                }
+
+                .form-group input{
+                  width: 50%;
+                }
+
+        </style>
+
+        <title>News page</title>
+    </head>
+    <body class="container">
+        {% include "admin_dashboard.html" %}
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+        <div class="container">
+                <div class="col-md-12">
+        <p style="font-family: 'Raleway', sans-serif; font-size: 52px; padding-left: 1%; font-weight: bold; text-align: center">News Page</p><br>
+        <form method="post" action="/news/">
+          {% csrf_token %}
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <div class="row">
+              <form >
+              <div class="col md-4">
+            <label for="footer"><b>Edit Slider</b></label>
+            <div class="form-group" >
+                <label for="formGroupSlider">Edit Slider Heading </label>
+                <input type="text" class="form-control" id="formGroupSlider" placeholder="Enter Slider Heading" name="slider_heading">
+            </div>
+            <div class="form-group">
+                <label for="formGroupSCap">Edit Slider Caption </label>
+                <input type="text" class="form-control" id="formGroupSCap" placeholder="Enter Slider Caption" name="slider_caption">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSImg">Edit Image of Slider</label>
+                <input type="file" class="form-control-file" id="exampleFormControlSImg">
+                <span>OR</span>
+                <input type="text" class="form-control" id="formGroupISLink" placeholder="Enter Image LINK" name="image_link">
+            </div>
+
+
+            <div class="card-body">
+                <input class="btn btn-primary" type="reset" value="Reset">
+                <input class="btn btn-primary" type="submit" value="Add slider" name="Signup1">
+            </div>
+
+  </div>
+        </div>
+
+
+
+            <h3 style="font-size: 20px; text-align: center; margin-top: 22px;">Add News</h3>
+
+
+            <div class="form-group">
+                <label for="formGroupAPNum">Heading of News </label>
+                <input type="text" class="form-control" id="formGroupASLink" placeholder="Enter Heading of News" name="heading">
+            </div>
+
+
+            <div class="form-group">
+                <label for="exampleFormControlAddNImg">Add News Images </label>
+                <input type="file" class="form-control-file" id="exampleFormControlAddNImg">
+                <span>OR</span>
+                <input type="text" class="form-control" id="formGroupILink" placeholder="Enter Image LINK" name="image1_link">
+            </div>
+
+
+            <div class="form-group">
+                <label for="formGroupAPNum">Edit News Content </label>
+                <textarea name="contents" type="text" class="form-control" rows="6" cols="10"  placeholder="Contents of News" /></textarea>
+            </div>
+
+
+            <div class="card-body">
+                <input class="btn btn-primary" type="reset" value="Reset">
+                <input class="btn btn-primary" type="submit" value="Submit" name="Signup2">
+            </div>
+
+        </form>
+        </div>
+        </div>
+    </body>
+</html>

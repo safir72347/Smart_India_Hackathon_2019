@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+                .body{
+                    background-color: white;
+                }
+                .form-control{
+                    background-color: #ecf0f1;
+                }
+
+        </style>
+
+        <title>Footer</title>
+    </head>
+    <body>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        {% include "admin_dashboard.html" %}
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+        <div class="container">
+        <p style="font-family: 'Raleway', sans-serif; font-size: 12vh;padding-left: 1%;">Footer page</p><br>
+        <form method="post" action="/admin_footer/">
+            {% csrf_token %}
+
+
+
+            <div class="form-group">
+                <label for="formGroupDisclaimer">Disclaimer</label>
+                <input type="text" name = "Disclaimer" class="form-control" value={{disclaimer}}  id="formGroupDisclaimer" cols="10" rows="5" placeholder="Enter the content to change Disclaimer" style="width:50%;"></textarea>
+            </div>
+
+
+            <label for="footer"><b>Contact Us</b></label>
+            <div class="form-group">
+                <label for="formGroupEmail">Email </label>
+                <input type="text" value="{{email}}"  name="Email" class="form-control" id="formGroupEmail" placeholder="Enter Email" style="width:50%;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="formGroupASLink">Add Facebook Link </label>
+                <input type="text" name="Facebook" class="form-control" id="formGroupASLink" value={{facebook}} placeholder="Enter Link" style="width:50%;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="formGroupSLink">Add Twitter Link</label>
+                <input type="text" name="Twitter" class="form-control" id="formGroupSLink" value={{twitter}} placeholder="Enter Link" style="width:50%;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="formGroupSLink">Add Google+ Link</label>
+                <input type="text" name="Google" class="form-control" id="formGroupSLink" value={{google}} placeholder="Enter Link" style="width:50%;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="formGroupSLink">Add Instagram Link</label>
+                <input type="text" name="Instagram" class="form-control" id="formGroupSLink" value={{instagram}} placeholder="Enter Link" style="width:50%;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="formGroupAPNum">Add Phone Number </label>
+                <input type="text" name = "Phone" class="form-control" id="formGroupASLink" value={{phone}} placeholder="Enter Phone Number" style="width:50%;">
+            </div>
+
+
+            <label for="footer"><b>Terms and Policies</b></label>
+            <div class="form-group">
+                <label for="formGroupT&Policies">Edit Terms and Policies</label>
+                <input type="text" name="Terms" class="form-control" name="Terms&Policies" value={{terms}} id="formGroupT&Polocies" cols="10" rows="5" placeholder="Enter content to change Terms and Policies" style="width:50%;"></textarea>
+            </div>
+            <div class="card-body">
+                <input class="btn btn-primary" type="reset" value="Reset">
+                <input class="btn btn-primary" name = "sub_footer" type="submit" value="Submit">
+            </div>
+
+        </form>
+        </div>
+    </body>
+</html>

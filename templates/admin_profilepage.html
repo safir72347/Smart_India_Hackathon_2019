@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+                .body{
+                    background-color: white;
+                }
+                .form-control{
+                    background-color: #ecf0f1;
+                }
+               
+        </style>
+
+        <title>profile page</title>
+    </head>
+    <body class="container-fluid">
+        {% include "admin_dashboard.html" %}
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+        <div class="container">
+                <div class="col-md-6 offset-md-3">
+        <p style="font-family: 'Raleway', sans-serif; font-size: 52px; padding-left: 1%; font-weight: bold; text-align: center">Profile Page</p><br>
+        <form>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+     
+            <label for="footer"><b>Edit Fields</b></label>
+            <div class="form-group">
+                <label for="formGroupAddF">Add Field </label>
+                <input type="text" class="form-control" id="formGroupAddF" placeholder="Enter to add Field">
+            </div>
+            <div class="form-group">
+                <label for="formGroupRemoveF">Remove Field </label>
+                <input type="text" class="form-control" id="formGroupRemoveF" placeholder="Enter Field Name to remove"><br>
+                <input class="btn btn-primary" id="formGroupRemoveImg" type="button" value="Remove">
+            </div>
+            <div class="form-group">
+                <label for="formGroupELink">Edit Link</label>
+                <input type="text" class="form-control" id="formGroupELink" placeholder="Enter to edit Link">
+            </div>
+            
+            <label for="footer"><b>Edit Profile Image</b></label>
+            <div class="form-group">
+                <label for="formGroupProfileImg">Profile Image</label>
+                <input type="file" class="form-control" id="formGroupProfileImg" placeholder="Change Profile Image">
+            </div>
+     
+            <div class="form-group">
+                <label for="formGroupAddPost">Add Post </label>
+                <input type="text" class="form-control" id="formGroupAddPost" placeholder="Enter to add Post">
+            </div>
+
+            <label for="footer"><b>Edit Contact Info</b></label>
+            <div class="form-group">
+                <label for="formGroupWNum">Work Number</label><br>
+                <input type="text" class="form-control" id="formGroupWNum" placeholder="Enter to change work number">
+            </div>
+            <div class="form-group">
+                <label for="formGroupMNum">Mobile Number</label>
+                <input type="text" class="form-control" id="formGroupMNum" placeholder="Enter to change Mobile number">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter to change email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="formGroupWAddr">Work Address</label>
+                <input type="text" class="form-control" id="formGroupWAddr" placeholder="Enter to change Work Address">
+            </div>
+            
+    
+        
+            <div class="card-body">
+                <input class="btn btn-primary" type="reset" value="Reset">
+                <input class="btn btn-primary" type="submit" value="Submit">
+            </div>  
+
+        </form>
+        </div>
+        </div>
+    </body>
+</html>

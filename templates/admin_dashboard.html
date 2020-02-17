@@ -1,0 +1,92 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        {% include "admin_external.html" %}
+        <link rel="stylesheet" href="{% static 'admin_style.css' %}" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Admin</title>
+        <style>
+          .nav_sec{
+            padding:2%;
+            padding-left: 30%;
+            text-align: justify;
+          }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none; text-align: center;
+
+
+        " id="mySidebar">
+          <button class="w3-bar-item w3-button w3-large"
+          onclick="w3_close()">Close &times;</button>
+          <div class="nav_sec"><a  href="#"><i class="fas fa-chart-line"style=""></i>Statistic <span class="sr-only">(current)</span></a></div>
+          <div class="nav_sec"><a  href="/admin_header">Header</a></div>
+            <div class="nav_sec"><a href="/admins"><i class="fas fa-home"style=""></i>Home</a></div>
+            <div class="nav_sec"><a href="/admin_aboutus"><i class="fas fa-info-circle"style=""></i>About us</a></div>
+            <div class="nav_sec"><a href="#"><i class="fas fa-layer-group"style=""></i>Forum</a></div>
+            <div class="nav_sec"><a href="/admin_latestnews"><i class="fas fa-newspaper"style=""></i>Latest News</a></div>
+            <div class="nav_sec"><a href="/admin_profilepage"><i class="fas fa-user-edit"style=""></i>Profile Page</a></div>
+            <div class="nav_sec"><a href="#"></a></div>
+            <div class="nav_sec"><a href="/admin_registerpage"><i class="fas fa-user-plus"style=""></i>Register</a></div>
+            <div class="nav_sec"><a href="/admin_aggregate"><i class="fas fa-user-plus"style=""></i>Aggregate from website</a></div>
+            <div class="nav_sec"><a  href="/admin_footer">Footer</a></div>
+            <div class="nav_sec"><a  href="/admin_category"><i class="fa fa-th" style=""></i>Categories</a></div>
+            <div class="nav_sec"><a  href="#"><i class="fas fa-bug"style=""></i>Reports</a></div>
+            <div class="nav_sec"><a  href="#"><i class="fas fa-users"style=""></i>User Info</a> </div>
+          </div>
+        </div>
+
+        <div id="main">
+
+        <div class="w3-teal">
+
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button id="openNav" class="w3-button  " style="width:5%;" onclick="w3_open()">&#9776;</button>
+  <a class="navbar-brand" href="/home" style="font-family: 'Teko', sans-serif; font-size: 4.5vh;">रहस्य</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" style="text-align: center;" id="navbarSupportedContent">
+
+              <div>
+
+                <a  href="#"><i class="fas fa-spin fa-cog"style=""></i>Settings</a>
+
+            </div>
+            </div>
+        </div>
+          </nav>
+
+
+
+        </div>
+
+
+
+        <script>
+        function w3_open() {
+          document.getElementById("main").style.marginLeft = "25%";
+          document.getElementById("mySidebar").style.width = "25%";
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+          document.getElementById("main").style.marginLeft = "0%";
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("openNav").style.display = "inline-block";
+        }
+        </script>
+
+
+
+    </body>
+</html>

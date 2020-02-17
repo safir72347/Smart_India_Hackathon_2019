@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .body{
+            background-color: white;
+        }
+        .form-control{
+            background-color: #ecf0f1;
+        }
+
+    </style>
+    <title>Home</title>
+  </head>
+  <body class="container-fluid">
+        {% include "admin_dashboard.html" %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <div class="container" style="padding-left:15%" >
+
+
+
+            <p style="font-family: 'Raleway', sans-serif; font-size: 12vh;padding-left: 0%;">Home page</p><br>
+    <form method = "post" action = "/admins/">
+        {% csrf_token %}
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Company Name</label>
+            <input type="text" name = "company_name" class="form-control" id="formGroupExampleInput" placeholder="Enter name of Company" style="width:50%;">
+        </div>
+        <div class="form-group">
+            <label for="compcap">Caption</label>
+            <input type="text" class="form-control" name="caption" id="compcap" cols="10" rows="5" placeholder="Company Caption" style="width:50%;"></textarea>
+        </div>
+        <label for="backimg"><b>Background Image</b></label>
+        <div class="custom-file">
+            <input type="file" name="back_img" class="custom-file-input" id="validatedCustomFile" required>
+            <label class="custom-file-label" for="validatedCustomFile" style="width:50%;">Browse Background Image</label>
+        </div>
+        <label for="cursolbuttons"><b>Curosol Buttons</b></label>
+        <div class="form-group">
+            <label for="formGroupCurosalbt1">Curosal button1</label>
+            <input type="text" name="curosal1" class="form-control" id="formGroupCurosalbt1" placeholder="Enter to change the name of Curosal Button1" style="width:50%;">
+        </div>
+        <div class="form-group">
+            <label for="formGroupCurosalbt2">Curosal button2</label>
+            <input type="text" name="curosal2" class="form-control" id="formGroupCurosalbt2" placeholder="Enter to change the name of Curosal Button2" style="width:50%;">
+        </div>
+
+        <label for="latestnews"><b>Latest News</b></label>
+        <div class="form-group">
+            <label for="formGroupNewstitle">News Title </label>
+            <input type="text" name="news_title" class="form-control" id="formGroupNewstitle" placeholder="Enter to change News Heading" style="width:50%;">
+        </div>
+        <label for="backimg">Image</label>
+        <div class="custom-file">
+            <input type="file" name="news_img" class="custom-file-input" id="validatedCustomFile" required>
+            <label class="custom-file-label" for="validatedCustomFile" style="width:50%;">Browse Image</label>
+        </div>
+        <div class="form-group">
+            <label for="formGroupNewsDescrip">Description</label>
+            <input type="text" name="news_des" class="form-control" name="Description" id="formGroupNewsDescrip" cols="10" rows="5" placeholder="Enter to change News Description" style="width:50%;"></textarea>
+        </div>
+        <div class="card-body">
+            <input class="btn btn-primary" type="reset" value="Reset">
+            <input class="btn btn-primary" type="submit" value="Submit" name = "Home">
+            </div>
+
+        </div>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+{% for question in QUESTIONS %}
+
+<div class="question_box border border-secondary-flush">
+    <div>
+        <p class="usr_detail text-secondary">Ministry <a href="#">Central</a></p>
+    </div>
+    <p class="ch3"><a href="#" class="h4 text-dark " data-toggle="modal" data-target="#{{ question.question_id }}" style="font-family: 'Crimson Text', serif;">{{ question.question }}</a></p>
+    <p class="lead" style="font-size:2vh;margin-top:-2%;"><span style="font-weight:bold;">Description:</span> {{ question.description }}</p>
+
+    <!--pop up-->
+
+    <div class="modal fade" id="{{ question.question_id }}" tabindex="-1" role="dialog" aria-labelledby="answer_pop_label" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document" style="width: 50%;height:300vh;">
+              <div class="modal-content" >
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="margin-top:-1.5%;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class=" ch31">{{ question.question }}</h3>
+                    <p class="lead" style="font-size:2vh;"><span style="font-weight:bold;">Description:</span> {{ question.description }}</p>
+
+                    {% for answer in ANSWERS %}
+                    {% if answer.question_id == question.question_id %}
+                    <div class="card text-center"></div>
+                            <div class="card-body">
+                                    <div class="row" style="padding-top:1%;">
+                                        <div class="col-md-1">
+                                            <i class="fas fa-user-circle "style="font-size:6vh;	"></i>
+                                        </div>
+                                        <div class="col-md-11">
+                                            <p class="usr_size"><a href="#" class="h6 text-dark">{{ answer.user_email }}</a><p class="text-muted usr_detail1">{{ institution }}</p></p>
+                                        </div>
+
+                                        <div class="row " style="padding: 2%; padding-left:4%;padding-right:4%;">
+                                            <p for="expend" class="lead usr_size" style="text-align: justify;">
+                                              {{ answer.answer }}
+                                            </p>
+                                        </div>
+                                    </div>
+                            <div class="card-footer text-muted">
+                                <a href="#" style="margin-right: 3%;"><i class="fas fa-thumbs-up" style="padding-right: 2%;"></i>Like</a>
+                                <a data-toggle="collapse" href="#cmnt" role="button" aria-expanded="false" aria-controls="cmnt" style="margin-right: 3%;"><i class="fas fa-comment-alt" style="padding-right: 2%;"></i>Comment</a>
+                                <a href="#" style="margin-right: 3%;"><i class="fas fa-thumbs-down" style="padding-right: 2%;"></i>Dislike</a>
+                                <div class=" row input-group mb-3" style="padding-top: 1%; padding-left:3%;">
+                                    <i class="fas fa-user" style="font-size:3vh; margin-right:2%;margin-top:1%;"></i><input type="text" class="form-control" placeholder="Enter your comment" aria-label="comments" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">Comment</button>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="cmnt">
+                                    <div class="card card-body" style="background-color: transparent;">
+                                        <div class="row" style="padding-top:1%;">
+                                            <div class="col-md-1">
+                                                <i class="fas fa-user-circle "style="font-size:6vh;	"></i>
+                                            </div>
+                                            <div class="col-md-10">
+                                                <p class="usr_size"><a href="#" class="h6 text-dark">{{ account_name }}</a><p class="text-muted usr_detail1">{{ institution }} </p></p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <p class="time text-muted"><span style="font-weight:650;"> 3 People responded </span> : <a href="#" class="text-muted">3 hrs ago </a></p>
+    <div>
+        <button class="btn btn-light " type="button" data-toggle="collapse" data-target="#answer_box" aria-expanded="false" aria-controls="answer_box" style="width:15%;margin-right:1%;"><i style="padding-right: 9%; font-size: 2.5vh;" class="fas fa-pen-nib"></i>Answer</button>
+        <button class="btn btn-light " style="width:15%;margin-right:1%;"><i style="padding-right: 9%; font-size: 2.5vh;" class="fas fa-running"></i>Skip</button>
+        <button class="btn btn-light " style="width:15%;margin-right:1%;"><i style="padding-right: 9%; font-size: 2.5vh;" class="fas fa-plus"></i>Follow</button>
+        <button class="btn btn-light " style="width:15%;margin-right:1%;"><i style="padding-right: 9%; font-size: 2.5vh;" class="fas fa-exclamation-triangle"></i>Report</button>
+        <button class="btn btn-light " style="width:15%;margin-right:1%;"><i style="padding-right: 9%; font-size: 2.5vh;" class="fas fa-share-alt"></i>Share</button>
+    </div>
+    <div class="collapse" id="answer_box">
+            <div class="card card-body" style="margin-top:2%;">
+                  <div class="row">
+                      <div class="col-md-1">
+                          <i class="fas fa-user-circle "style="font-size:6vh;	"></i>
+                      </div>
+                      <div class="col-md-11">
+                          <p class="usr_size"><a href="#" class="h6 text-dark">{{ account_name}}</a><p class="text-muted usr_detail1">{{institution}} <span class="text-muted usr_detail1"></span></p></p>
+                      </div>
+                  </div>
+                  <form action="/question_page/" method="POST">
+{% csrf_token %}
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="answer"></textarea>
+                  <input type="hidden" name="question_id" value="{{ question.question_id }}">
+                  <div style="padding-top:2vh;">
+
+                      <input type="submit" class="btn btn-outline-dark" style="width:15%;" value="Post" name="Submit"></a>
+                    </form>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:2%;"><i class="fas fa-bold"></i></a>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:1%;"><i class="fas fa-italic"></i></a>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:1%;"><i class="fas fa-list"></i></a>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:1%;"><i class="fas fa-list-ol"></i></a>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:1%;"><i class="fas fa-video"></i></a>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:1%;"><i class="fas fa-image"></i></a>
+                      <a class="text-dark" href="#" style="font-size: 3vh; padding-right:1%;padding-left:1%;"><i class="fas fa-link"></i></a>
+                  </div>
+              </div>
+          </div>
+    <div class="col-md-10">
+
+    </div>
+</div>
+
+{% endfor %}

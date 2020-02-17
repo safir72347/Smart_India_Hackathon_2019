@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+                .body{
+                    background-color: white;
+                }
+                .form-control{
+                    background-color: #ecf0f1;
+                }
+               
+        </style>
+
+        <title>navbar</title>
+    </head>
+    <body>
+        
+        {% include "admin_dashboard.html" %}
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <div class="container">
+            <p style="font-family: 'Raleway', sans-serif; font-size: 12vh; padding-left: 1%;">Navbar page</p><br>
+
+            <form>
+
+                <label for="navbarother"><b>Navbar Tab Buttons</b></label>
+                <div class="form-group">
+                    <label for="formGroupBtn1">Button Link 1</label>
+                    <input type="text" class="form-control" id="formGroupBtn1" placeholder="Enter to change name of tab/button1 (Home)" style="width:50%;">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupBtn2">Button Link 2</label>
+                    <input type="text" class="form-control" id="formGroupBtn2" placeholder="Enter to change name of tab/button2 (AboutUs) " style="width:50%;">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupBtn3">Button Link 3</label>
+                    <input type="text" class="form-control" id="formGroupBtn3" placeholder="Enter to change name of tab/button3 (Latest News) " style="width:50%;">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupBtn4">Button Link 4</label>
+                    <input type="text" class="form-control" id="formGroupBtn4" placeholder="Enter to change name of tab/button4 (Forum) " style="width:50%;">
+                </div>
+                        
+                <label for="navbarother"><b>Others</b></label>
+                <div class="form-group">
+                    <label for="formGroupotherbt1">Others button1</label>
+                    <input type="text" class="form-control" id="formGroupotherbt1" placeholder="Enter to change the name of Others Button1 (Research)" style="width:50%;">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupotherbt2">Others button2</label>
+                    <input type="text" class="form-control" id="formGroupotherbt2" placeholder="Enter to change the name of Others Button2 (Publication)" style="width:50%;">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupotherbt3">Others button3</label>
+                    <input type="text" class="form-control" id="formGroupotherbt3" placeholder="Enter to change the name of Othhers Button3 (Training)" style="width:50%;">
+                </div>
+
+                <div class="card-body">
+                    <input class="btn btn-primary" type="reset" value="Reset">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                </div>  
+
+
+            </form>
+        </div>
+
+
+    </body>
+</html>

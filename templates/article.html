@@ -1,0 +1,50 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include "external.html" %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .h12{
+            font-family: 'Cinzel', serif;
+            font-size: 6vh;
+        }
+    </style>
+    <title>{{ Knowledge Sharing Platform }}</title>
+  </head>
+  <body>
+      <section class="container-fluid">
+          {% include "nabar.html" %}
+      </section>
+      <section class="container article" style="margin-top:4%;">
+            <p class="h12">
+                This is your news heading so put your heading here
+            </p>
+            <p class="h5 text-muted">Published 26 July 2019</p>
+            <img src="https://wallpapercave.com/wp/wp2429387.jpg" class="img-fluid rounded shadow-lgss" alt="Responsive image">
+            <p class="lead text-dark" style="padding-top:3%;text-align: justify;">
+                    &emsp;&emsp;&emsp;&emsp; NEW DELHI: With Lok Sabha elections just a few weeks away, PM Modi has received a massive thumbs up in a mega Times Group online poll, with over two-thirds (83%) of the over 2 lakh respondents who took the survey saying a Modi-led NDA government was the most-likely possibility after the polls.
+                    The poll also indicates that the Prime Minister’s personal popularity remains high. With the official announcement of the general election days away, 84% of respondents said that they would prefer Narendra Modi as PM candidate if Lok Sabha polls were held today.
+                    NEW DELHI: With Lok Sabha elections just a few weeks away, PM Modi has received a massive thumbs up in a mega Times Group online poll, with over two-thirds (83%) of the over 2 lakh respondents who took the survey saying a Modi-led NDA government was the most-likely possibility after the polls.
+                    The poll also indicates that the Prime Minister’s personal popularity remains high. With the official announcement of the general election days away, 84% of respondents said that they would prefer Narendra Modi as PM candidate if Lok Sabha polls were held today.NEW DELHI: With Lok Sabha elections just a few weeks away, PM Modi has received a massive thumbs up in a mega Times Group online poll, with over two-thirds (83%) of the over 2 lakh respondents who took the survey saying a Modi-led NDA government was the most-likely possibility after the polls.
+                    The poll also indicates that the Prime Minister’s personal popularity remains high. With the official announcement of the general election days away, 84% of respondents said that they would prefer Narendra Modi as PM candidate if Lok Sabha polls were held today.NEW DELHI: With Lok Sabha elections just a few weeks away, PM Modi has received a massive thumbs up in a mega Times Group online poll, with over two-thirds (83%) of the over 2 lakh respondents who took the survey saying a Modi-led NDA government was the most-likely possibility after the polls.
+                    The poll also indicates that the Prime Minister’s personal popularity remains high. With the official announcement of the general election days away, 84% of respondents said that they would prefer Narendra Modi as PM candidate if Lok Sabha polls were held today.
+            </p>
+      </section>
+      <section class="container-fluid">
+            {% include "footer.html" %}
+        </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

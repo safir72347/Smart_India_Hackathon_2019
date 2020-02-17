@@ -1,0 +1,222 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+  	{% include "external.html" %}
+  	<link rel="stylesheet" href="{% static 'forum.css' %}" type="text/css">
+		<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+		<link rel="stylesheet" href="{% static 'question_page.css' %}" type="text/css">
+
+  	<title>
+  		Knowledge Sharing Platform
+		</title>
+		<style>
+			.question_box{
+				margin-top:0%;
+				margin-bottom: 2%;
+				width: 100%;
+				padding:2%;
+				padding-left:3%;
+				border-radius: 7px;
+				background-color: white;
+			}
+
+		.rq{
+			font-size: 2vh;
+		}
+
+			.usr_size{
+				font-size: 2.3vh;
+				margin-top:0%;
+			}
+			.usr_detail{
+				font-size: 2.1vh;
+				margin-top:-3%;
+			}
+
+			#expend {
+				display:none;
+			}
+
+			#expend + .smalldesc {
+				max-height:170px;
+				overflow:hidden;
+				transition:all .3s ease;
+			}
+
+			#expend:checked + .smalldesc {
+				max-height:100%;
+			}
+
+			label {
+
+				cursor:pointer;
+			}
+
+			label:hover {
+				text-decoration:none;
+			}
+
+			.usr_details{
+    font-size: 2vh;
+    margin-top:-3vh;
+}
+			@media only screen and (max-width:600px){
+				.question_box{
+					padding:2%;
+					padding-left:5%;
+				}
+
+				.ch3{
+					font-size: 3.5vh;
+					padding-left:4%;
+					padding-right:4%;
+				}
+
+
+			}
+		</style>
+  </head>
+  <body>
+
+  	{% include "nabar.html" %}
+
+  	<!--notification bar starts -->
+  	<section class="container-fluid">
+  		<div class="row notification_bar">
+  			<div class="col-md-2">
+  				<h4 class="forum_heading">Forum<i class="fa fa-play f_icon_in"></i></h4>
+  			</div>
+  			<div class="col-md-3">
+						<a href="/question_page/"><h5 class="forum_heading"><i class="fas fa-pen-square f_icon"></i>Answers<sup style="padding-left: 2%;"><a href="#" class="badge badge-dark">2345</a></sup></h5></a>
+  			</div>
+  			<div class="col-md-3">
+  				<h5 class="forum_heading"><i class="fas fa-bell f_icon"></i>Notifications<sup style="padding-left: 2%;"><a href="#" class="badge badge-dark">2345</a></sup></h5>
+				</div>
+  			<div class="col-md-4">
+				  <button type="button" class="btn btn-outline-dark aq"data-toggle="modal" data-target="#question">Ask a question..</button>
+				  <div class="modal fade" id="question" tabindex="-1" role="dialog" aria-labelledby="QnA" aria-hidden="true" >
+						<div class="modal-dialog modal-lg" role="document" >
+						  <div class="modal-content">
+							<div class="modal-header"style="background-color: #151515; color:white;">
+							  <h5 class="modal-title" id="QnA" >Ask a question</h5>
+							  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							  </button>
+							</div>
+							<div class="modal-body" >
+								<form method="POST" action=".">
+									<div class="form-group">
+                    {% csrf_token %}
+										<textarea name="question" class="form-control" id="question" aria-describedby="questionHelp" placeholder="Enter Questions" style="font-size: 3vh;"></textarea>
+									</div>
+									<div class="form-group">
+										<textarea name="description" class="form-control" id="Description" aria-describedby="questionHelp" placeholder="Enter Questions Description" style="height: 20vh;"></textarea>
+									</div>
+							</div>
+							<div class="modal-footer">
+							  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							  <button type="submit" class="btn btn-outline-dark">Add Question</button>
+              </form>
+							</div>
+						  </div>
+						</div>
+					  </div>
+  			</div>
+  		</div>
+  	</section>
+  	<!--notification bar ends -->
+
+  	<!--question divisions starts -->
+  	<section class="container-fluid"style="background-color: #ecf0f1;">
+  		<div class="  row">
+				<div class="forum_cat col-md-2 " ">
+						<div class="list-group-flush">
+								<button type="button" class="list-group-item list-group-item-action rounded active">
+										<i class="fas fa-university" style="font-size: 2.8vh; padding-right: 2vh;padding-left: 2vh;"></i>Category one
+								</button>
+								<button type="button" class="list-group-item list-group-item-action rounded"><i class="fas fa-university" style="font-size: 2.8vh; padding-right: 2vh;padding-left: 2vh;"></i>Category one</button>
+								<button type="button" class="list-group-item list-group-item-action rounded"><i class="fa fa-graduation-cap" style="font-size: 2.8vh; padding-right: 2vh;padding-left: 2vh;"></i>Category one</button>
+								<button type="button" class="list-group-item list-group-item-action rounded"><i class="fas fa-book" style="font-size: 2.8vh; padding-right: 2vh;padding-left: 2vh;"></i>Category one</button>
+								<button type="button" class="list-group-item list-group-item-action rounded"><i class="fas fa-university" style="font-size: 2.8vh; padding-right: 2vh;padding-left: 2vh;"></i>Category one</button>
+								<button type="button" class="list-group-item list-group-item-action rounded"><i class="fas fa-university" style="font-size: 2.8vh; padding-right: 2vh;padding-left: 2vh;"></i>Category one</button>
+						</div>
+				</div>
+  			<div class="forum_main col-md-7">
+						{% include "qna.html" %}
+						{% include "qna.html" %}
+						{% include "qna.html" %}
+						{% include "qna.html" %}
+						{% include "qna.html" %}
+						{% include "qna.html" %}
+
+			</div>
+			<div class="container-fluid col-md-3">
+				<div class="forum_hot row">
+					<div class="col-md-12">
+						<div class="card rounded border border-secondary" style="width: 100%; height: 100%;">
+						  <div class="card-body">
+						    <div class="ad_head rounded">
+						    	<h5 class="card-title ">Recommended questions</h5>
+					    	</div>
+					    	<div class="container-fluid">
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+									<a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+									<a href="#" class="card-link rq">Need help now with power steering?</a><br>
+						   	 <a href="#" class="card-link rq">Why does a person lose diplomatic status?</a><br>
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+				<div class="forum_ad row">
+					<div class="col-md-12">
+						<div class="card mb-3">
+						 	<div class="container-fluid" style="padding-top: 2%;">
+						  		<img src="https://www.dulwichpicturegallery.org.uk/media/7975/weddings-at-dulwich-picture-gallery_010.jpg" class="card-img-top" alt="...">
+						  	</div>
+							  <div class="card-body">
+							  	<div class="ad_head">
+							    	<h5 class="card-title">Eclusive Offer</h5>
+						    	</div>
+							    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							  </div>
+							  <div  style="text-align: center;padding-bottom: 3%;">
+							  	<a href="#" class="btn btn-outline-dark aq">Go somewhere</a>
+							  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+  	</section>
+  	<!--question divisions ends -->
+
+
+  	{% include "footer.html" %}
+
+  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  </html>

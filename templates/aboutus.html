@@ -1,0 +1,93 @@
+{% load static from staticfiles %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% include "external.html" %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'aboutus.css' %}">
+
+    <title>about us</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+      {% include "header.html" %}
+      {% include "nabar.html" %}
+      <div class="container-fluid bg-white">
+        <div class="row ">
+            <div class="col-md-6 about-picture height-70 mt-5"></div>
+            <div class="col-md-6 align-items-center mt-5">
+                <hr class="border-danger">
+            <h1>ABOUT US</h1>
+            <p>{{ about_us }}
+                </p>
+            <hr class="border-danger">
+           <h1>AIMS AND OBJECTIVES</h1>
+                <li>{{ aim }}</li>
+            </ul>
+            <p>{{ content }}</p>
+            
+</div>
+</div>
+</div>
+<section id="skills" class=" raja py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="display-6 text-uppercase text-dark">
+                        <strong>About Rahasya</strong>
+                    </h1>
+                    <div class="title-underline bg-danger"></div>
+                    <p class="text-capitalize text-muted mt-2">these are my skillls and this is my passion</p>
+
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-3 col-lg-3 text-center my-4">
+                    <i class="fab fa-node-js fa-5x text-danger"></i>
+                    <h3 class="text-uppercase my-3">himalaya sagar</h3>
+                    <p class="text-muted">from MIT ADT UNIVERSITY <br> pursuing b.tech(IT)</p>
+                </div>
+                <div class="col-md-3 col-lg-3 text-center my-4">
+                    <i class="fab fa-html5 fa-5x text-danger"></i>
+                    <h3 class="text-uppercase my-3">rajendra </h3>
+                    <p class="text-muted">from MIT ADT UNIVERSITY  pursuing b.tech(IT)</p>
+                </div>
+                <div class="col-md-3 col-lg-3 text-center my-4">
+                    <i class="fab fa-css3 fa-5x text-danger"></i>
+                    <h3 class="text-uppercase my-3">RAM SUTHAR</h3>
+                    <p class="text-muted">from MIT ADT UNIVERSITY <br> pursuing b.tech(IT)</p>
+                </div>
+                <div class="col-md-3 col-lg-3 text-center my-4">
+                    <i class="fab fa-js fa-5x text-danger"></i>
+                    <h3 class="text-uppercase my-3">SAFIR MOTIWALA</h3>
+                    <p class="text-muted">from MIT ADT UNIVERSITY <br> pursuing b.tech(IT)</p>
+                </div>
+                <div class="col-md-3 col-lg-3 text-center my-4">
+                        <i class="fab fa-js fa-5x text-danger"></i>
+                        <h3 class="text-uppercase my-3">RUTUJA KALBHOUR</h3>
+                        <p class="text-muted">from MIT ADT UNIVERSITY <br> pursuing b.tech(IT)</p>
+                    </div>
+                    <div class="col-md-3 col-lg-3 text-center my-4">
+                            <i class="fab fa-js fa-5x text-danger"></i>
+                            <h3 class="text-uppercase my-3">VINAYAK SUTAR</h3>
+                            <p class="text-muted">from MIT ADT UNIVERSITY pursuing b.tech(IT)</p>
+                        </div>
+            </div>
+        </div>
+    </section>
+    {% include "footer.html" %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

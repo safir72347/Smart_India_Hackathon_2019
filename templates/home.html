@@ -1,0 +1,104 @@
+
+{% load static from staticfiles %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    {% include "external.html" %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/plugins/chartist-js/dist/chartist.min.css' %}" type="text/css">
+
+
+    <title></title>
+
+    <div id='MicrosoftTranslatorWidget' class='Dark' style='color:white;background-color:#555555'></div>
+    <script type='text/javascript'>
+    setTimeout(function(){{
+      var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location && location.href && location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=False&ui=true&settings=Manual&from=';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);
+    </script>
+
+  </head>
+  <body>
+
+
+    	  <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="blog" tabindex="-1" role="dialog" aria-labelledby="AddaPost" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="AddaPost">Add a post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <form method = "post" action = "/home/">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">heading</label>
+                    <input type="text" name = "head1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Heading">
+
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">description</label>
+                    <input type="text" name="des1" class="form-control" id="exampleInputPassword1" placeholder="description">
+                  </div>
+
+                  <button type="submit" name="sub_popup" class="btn btn-primary" value = "sub_article">Submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% include "header.html" %}
+        {% include "nabar.html" %}
+        <section class="container-fluid wall">
+          <h1 class="naam">
+            {{ company_name }}
+          </h1>
+          <p class="naam_niche">
+            {{ caption }}
+          </p>
+        </section>
+        <section class="container-fluid two_bns">
+
+          <div class="row">
+            <div class="b">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="bt1" style="background-color: #2196F3;"><img src="{% static 'Central.png' %}" style="height:6vh;padding-top:-2%;">{{ curosal1 }}</button>
+            </div>
+            <div class="b">
+                <button type="button" class="btn btn-primary btn-lg btn-block" id="bt2" style="background-color: #03A9F4;"> {{ curosal2 }} </button>
+            </div>
+          </div>
+        </section>
+<br>
+        <section class=" container-fluid latest_news">
+          <div class=" news_head">
+            <h4>
+              Latest News
+            </h4>
+          </div>
+            {% include "news_card.html" %}
+            {% include "news_card.html" %}
+        </section>
+        <!--Profile Card 5-->
+
+        {% include "footer.html" %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
